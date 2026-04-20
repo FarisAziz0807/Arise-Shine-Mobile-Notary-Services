@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arise & Shine Mobile Notary Services | 24/7 | Houston, TX</title>
+  <meta name="description" content="Arise & Shine Mobile Notary Services – Professional, 24/7 mobile notary. We come to you. 5-star rated. Call +1 832-429-7191" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --gold:       #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-pale:  #F5E9C8;
+      --black:      #0A0A0A;
+      --ink:        #1A1A1A;
+      --charcoal:   #2C2C2C;
+      --mid:        #6B6B6B;
+      --silver:     #B8B8B8;
+      --off-white:  #FAFAF8;
+      --white:      #FFFFFF;
+      --section-pad: clamp(4rem, 8vw, 8rem);
+      --radius:     12px;
+      --shadow-sm:  0 2px 12px rgba(0,0,0,.08);
+      --shadow-md:  0 8px 32px rgba(0,0,0,.12);
+      --shadow-lg:  0 20px 60px rgba(0,0,0,.18);
+      --transition: all .35s cubic-bezier(.4,0,.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 5rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
+    p  { font-size: clamp(.95rem, 1.6vw, 1.05rem); color: var(--charcoal); }
+
+    .gold      { color: var(--gold); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 2rem); }
+    .tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      border-radius: 100px;
+      padding: .28rem .9rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      padding: .85rem 1.9rem;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--black);
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.55);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+    .divider {
+      display: block;
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.2rem 0 1.8rem;
+    }
+    .divider.center { margin: 1.2rem auto 1.8rem; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HEADER */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.2rem 0;
+      transition: var(--transition);
+    }
+    #header.scrolled {
+      background: rgba(10,10,10,.96);
+      backdrop-filter: blur(16px);
+      padding: .75rem 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,.35);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .logo { display: flex; flex-direction: column; gap: 0; }
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .logo-sub {
+      font-size: .65rem;
+      letter-spacing: .15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: .85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.75);
+      letter-spacing: .03em;
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      width: 0; height: 1.5px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      font-size: .82rem !important;
+      font-weight: 600 !important;
+      color: var(--black) !important;
+      background: var(--gold);
+      padding: .55rem 1.3rem;
+      border-radius: 100px;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .4rem;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(10,10,10,.98);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 5rem 2rem 2rem;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 1.1rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+    .mobile-menu a:last-child { border: none; margin-top: 1rem; }
+    .close-menu {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1800&q=80') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.78) 55%,rgba(30,20,5,.60) 100%);
+    }
+
+    /* Hero grid: content left, image right */
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: clamp(2rem, 5vw, 5rem);
+      padding: clamp(7rem, 14vw, 10rem) 0 clamp(4rem, 8vw, 6rem);
+    }
+
+    .hero-content {
+      min-width: 0;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(201,168,76,.15);
+      border: 1px solid rgba(201,168,76,.4);
+      color: var(--gold-light);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.8rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero-stars {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1.5rem;
+    }
+    .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+    .hero-stars span { font-size: .85rem; color: rgba(255,255,255,.7); }
+    .hero-stars strong { color: var(--white); }
+    #hero h1 { color: var(--white); margin-bottom: 1.4rem; }
+    #hero h1 em { color: var(--gold-light); font-style: italic; }
+    #hero p {
+      color: rgba(255,255,255,.75);
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin-bottom: 2.4rem;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 3rem;
+    }
+    .hero-pill {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.8);
+      font-size: .8rem;
+      padding: .45rem 1rem;
+      border-radius: 100px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-pill i { color: var(--gold); font-size: .85rem; }
+
+    /* Hero image — right column */
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      align-self: flex-end;
+      flex-shrink: 0;
+    }
+    .hero-portrait {
+      width: clamp(220px, 26vw, 400px);
+      height: clamp(320px, 68vh, 580px);
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -12px 60px rgba(0,0,0,.5), 0 0 0 2px rgba(201,168,76,.35);
+      filter: brightness(1.04) contrast(1.02);
+      display: block;
+    }
+    .hero-portrait-badge {
+      position: absolute;
+      bottom: 1.4rem;
+      left: 0;
+      background: var(--gold);
+      color: var(--black);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .5rem 1.1rem .5rem 1rem;
+      border-radius: 0 100px 100px 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Hide image on tablets / mobile — shows content cleanly */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 4rem;
+      }
+      .hero-image-wrap {
+        display: none;
+      }
+    }
+
+    /* On medium screens show a smaller image */
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .hero-portrait {
+        width: clamp(180px, 22vw, 300px);
+        height: clamp(260px, 55vh, 460px);
+      }
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      color: rgba(255,255,255,.4);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* TRUST BAR */
+    #trust-bar { background: var(--gold); padding: 1rem 0; }
+    .trust-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: .04em;
+    }
+
+    /* ABOUT */
+    #about { padding: var(--section-pad) 0; background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .about-image-wrap { position: relative; }
+    .about-img { border-radius: var(--radius); height: 520px; object-fit: cover; }
+    .about-badge-card {
+      position: absolute;
+      bottom: -1.5rem; right: -1.5rem;
+      background: var(--gold);
+      color: var(--black);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.8rem;
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+    .about-badge-card .big-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .about-badge-card p { font-size: .78rem; font-weight: 600; color: var(--black); letter-spacing: .05em; }
+    .about-text h2 { margin-bottom: .5rem; }
+    .about-text p  { margin-bottom: 1.2rem; }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .about-feat {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      padding: 1rem;
+      border-radius: 10px;
+      background: var(--off-white);
+      transition: var(--transition);
+    }
+    .about-feat:hover { background: var(--gold-pale); transform: translateY(-2px); }
+    .about-feat-icon {
+      width: 36px; height: 36px; min-width: 36px;
+      border-radius: 8px;
+      background: var(--gold);
+      display: grid; place-items: center;
+      color: var(--black); font-size: .85rem;
+    }
+    .about-feat-text strong { display: block; font-size: .88rem; font-weight: 600; color: var(--ink); margin-bottom: .15rem; }
+    .about-feat-text span  { font-size: .78rem; color: var(--mid); }
+
+    /* SERVICES */
+    #services { padding: var(--section-pad) 0; background: var(--ink); }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-header h2 { color: var(--white); }
+    .section-header p  { color: rgba(255,255,255,.6); max-width: 540px; margin: 0 auto; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,.06) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity .35s;
+    }
+    .service-card:hover {
+      border-color: rgba(201,168,76,.35);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.3);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 54px; height: 54px;
+      border-radius: 12px;
+      background: rgba(201,168,76,.12);
+      border: 1px solid rgba(201,168,76,.25);
+      display: grid; place-items: center;
+      font-size: 1.3rem; color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+    .service-card h3 { color: var(--white); font-size: 1.3rem; margin-bottom: .75rem; }
+    .service-card p  { color: rgba(255,255,255,.55); font-size: .9rem; line-height: 1.6; }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-top: 1.2rem;
+      font-size: .82rem; font-weight: 600;
+      color: var(--gold); letter-spacing: .04em;
+      transition: gap .25s;
+    }
+    .service-card:hover .service-link { gap: .65rem; }
+    .service-card.featured {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .service-card.featured::before { display: none; }
+    .service-card.featured .service-icon {
+      background: rgba(0,0,0,.15);
+      border-color: rgba(0,0,0,.2);
+      color: var(--black);
+    }
+    .service-card.featured h3,
+    .service-card.featured p,
+    .service-card.featured .service-link { color: var(--black); }
+
+    /* WHY */
+    #why { padding: var(--section-pad) 0; background: var(--off-white); position: relative; }
+    #why::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .why-visual { position: relative; }
+    .why-img { border-radius: var(--radius); height: 480px; object-fit: cover; }
+    .why-overlay-card {
+      position: absolute;
+      top: 2rem; left: -2rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      box-shadow: var(--shadow-lg);
+      border-left: 4px solid var(--gold);
+      max-width: 220px;
+    }
+    .why-overlay-card .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
+    }
+    .why-overlay-card p { font-size: .8rem; color: var(--mid); }
+    .why-reasons { display: flex; flex-direction: column; gap: 1.5rem; }
+    .why-item {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.4rem;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,.06);
+      transition: var(--transition);
+    }
+    .why-item:hover {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(4px);
+    }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--gold-pale); line-height: 1;
+      min-width: 36px;
+    }
+    .why-item h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+    .why-item p  { font-size: .88rem; }
+
+    /* TESTIMONIALS */
+    #testimonials { padding: var(--section-pad) 0; background: var(--gold); }
+    #testimonials .tag { color: var(--black); border-color: rgba(0,0,0,.3); }
+    .testimonials-header { text-align: center; margin-bottom: 3.5rem; }
+    .testimonials-header h2 { color: var(--black); }
+    .testimonials-header p  { color: rgba(0,0,0,.65); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .tcard {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,.1);
+      transition: var(--transition);
+    }
+    .tcard:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,.15); }
+    .tcard-stars { color: var(--gold); font-size: .95rem; margin-bottom: 1rem; }
+    .tcard p {
+      font-size: .95rem; line-height: 1.75;
+      color: var(--charcoal); margin-bottom: 1.4rem;
+      font-style: italic;
+    }
+    .tcard-author {
+      display: flex; align-items: center; gap: .85rem;
+      border-top: 1px solid rgba(0,0,0,.07);
+      padding-top: 1.2rem;
+    }
+    .author-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--gold-pale);
+      display: grid; place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--gold); flex-shrink: 0;
+    }
+    .author-info strong { display: block; font-size: .88rem; color: var(--ink); }
+    .author-info span   { font-size: .77rem; color: var(--mid); }
+    .google-badge {
+      display: flex; align-items: center; justify-content: center;
+      gap: .6rem; margin-top: 2.5rem;
+      color: rgba(0,0,0,.6); font-size: .82rem; font-weight: 500;
+    }
+
+    /* CONTACT */
+    #contact { padding: var(--section-pad) 0; background: var(--white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: .5rem; }
+    .contact-info > p { margin-bottom: 2rem; }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.2rem; background: var(--off-white);
+      border-radius: var(--radius); margin-bottom: 1rem;
+      transition: var(--transition);
+    }
+    .contact-detail:hover { background: var(--gold-pale); }
+    .cd-icon {
+      width: 44px; height: 44px; min-width: 44px;
+      border-radius: 10px; background: var(--gold);
+      display: grid; place-items: center;
+      color: var(--black); font-size: 1rem;
+    }
+    .cd-text strong { display: block; font-size: .85rem; color: var(--mid); margin-bottom: .15rem; }
+    .cd-text a, .cd-text span { font-size: 1rem; font-weight: 600; color: var(--ink); }
+    .cd-text a:hover { color: var(--gold); }
+    .contact-form-wrap {
+      background: var(--off-white);
+      border-radius: 20px; padding: 2.5rem;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+    .contact-form-wrap h3 { margin-bottom: 1.8rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label {
+      display: block; font-size: .8rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: var(--mid); margin-bottom: .5rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem; color: var(--ink);
+      background: var(--white);
+      border: 1.5px solid rgba(0,0,0,.1);
+      border-radius: 10px; padding: .85rem 1rem;
+      outline: none; transition: border-color .25s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; justify-content: center; font-size: 1rem; padding: 1rem; border-radius: 12px; margin-top: .5rem; }
+    .form-success {
+      display: none; text-align: center; padding: 1.5rem;
+      background: rgba(201,168,76,.1); border-radius: 12px;
+      border: 1px solid rgba(201,168,76,.3); color: var(--gold); font-weight: 600;
+    }
+
+    /* FOOTER */
+    #footer { background: var(--black); padding: 4rem 0 2rem; }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .footer-brand .logo-name { font-size: 1.4rem; display: block; margin-bottom: .3rem; }
+    .footer-brand p { font-size: .88rem; color: rgba(255,255,255,.4); margin-top: .8rem; max-width: 280px; }
+    .footer-brand .footer-phone {
+      display: inline-flex; align-items: center; gap: .6rem;
+      margin-top: 1.4rem; background: var(--gold);
+      color: var(--black) !important; font-weight: 700; font-size: .95rem;
+      padding: .7rem 1.4rem; border-radius: 100px; transition: var(--transition);
+    }
+    .footer-brand .footer-phone:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .footer-col h4 {
+      font-family: 'DM Sans', sans-serif; font-size: .78rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-col ul li { margin-bottom: .6rem; }
+    .footer-col ul li a { font-size: .88rem; color: rgba(255,255,255,.5); transition: color .25s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; padding-top: 2rem;
+    }
+    .footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.3); }
+    .footer-social { display: flex; gap: .75rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.15);
+      display: grid; place-items: center;
+      color: rgba(255,255,255,.5); font-size: .85rem;
+      transition: var(--transition);
+    }
+    .footer-social a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* FLOAT CTA */
+    .float-cta {
+      position: fixed; bottom: 2rem; right: 1.5rem;
+      z-index: 900; display: flex; align-items: center; gap: .65rem;
+      background: var(--gold); color: var(--black);
+      font-weight: 700; font-size: .9rem;
+      padding: .9rem 1.5rem; border-radius: 100px;
+      box-shadow: 0 8px 32px rgba(201,168,76,.45);
+      transition: var(--transition);
+      animation: pulse-btn 2.5s infinite;
+    }
+    .float-cta:hover { background: var(--gold-light); transform: translateY(-3px); }
+    @keyframes pulse-btn {
+      0%,100% { box-shadow: 0 8px 32px rgba(201,168,76,.45); }
+      50%      { box-shadow: 0 8px 40px rgba(201,168,76,.7); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-image-wrap { order: -1; }
+      .about-badge-card { bottom: 1rem; right: 1rem; }
+      .why-overlay-card { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-img, .why-img { height: 320px; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-features { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .float-cta .cta-label { display: none; }
+      .float-cta { padding: 1rem; border-radius: 50%; width: 56px; height: 56px; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="tel:+18324297191" class="float-cta" aria-label="Call Now">
+    <i class="fas fa-phone-alt"></i>
+    <span class="cta-label">Call Now</span>
+  </a>
+
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="#hero" class="logo">
+          <span class="logo-name">Arise & Shine</span>
+          <span class="logo-sub">Mobile Notary Services</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tel:+18324297191" class="nav-cta"><i class="fas fa-phone-alt"></i> +1 832-429-7191</a></li>
+        </ul>
+        <button class="hamburger" onclick="openMenu()" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+    <a href="#about"        onclick="closeMenu()">About</a>
+    <a href="#services"     onclick="closeMenu()">Services</a>
+    <a href="#why"          onclick="closeMenu()">Why Choose Us</a>
+    <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+    <a href="#contact"      onclick="closeMenu()">Contact</a>
+    <a href="tel:+18324297191" style="color:var(--gold);font-weight:700;">
+      <i class="fas fa-phone-alt" style="margin-right:.5rem"></i>+1 832-429-7191
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- LEFT: Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            Certified Notary Public · Houston, TX
+          </div>
+          <div class="hero-stars">
+            <span class="stars">★★★★★</span>
+            <span><strong>5.0</strong> · 31 Google Reviews</span>
+          </div>
+          <h1>Fast, Reliable<br><em>Mobile Notary</em><br>Services—24/7</h1>
+          <p>We come to your home, office, or hospital. Professional notarization when and where you need it—no waiting, no hassle.</p>
+          <div class="hero-ctas">
+            <a href="tel:+18324297191" class="btn btn-gold">
+              <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-calendar-alt"></i> Book Appointment
+            </a>
+          </div>
+          <div class="hero-pills">
+            <span class="hero-pill"><i class="fas fa-clock"></i> Open 24 Hours</span>
+            <span class="hero-pill"><i class="fas fa-car"></i> We Come to You</span>
+            <span class="hero-pill"><i class="fas fa-bolt"></i> Fast Response</span>
+            <span class="hero-pill"><i class="fas fa-star"></i> 5-Star Rated</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Portrait image -->
+        <div class="hero-image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85"
+            alt="Amanda Cantu – Arise & Shine Mobile Notary"
+            class="hero-portrait"
+          />
+          <span class="hero-portrait-badge">Amanda Cantu · Certified Notary</span>
+        </div>
+
+      </div><!-- /.hero-grid -->
+    </div>
+    <div class="hero-scroll"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div id="trust-bar">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item"><i class="fas fa-star"></i> 5.0 Google Rating</div>
+        <div class="trust-item"><i class="fas fa-clock"></i> Available 24/7</div>
+        <div class="trust-item"><i class="fas fa-map-marker-alt"></i> Houston & Surrounding Areas</div>
+        <div class="trust-item"><i class="fas fa-certificate"></i> Certified & Bonded</div>
+        <div class="trust-item"><i class="fas fa-bolt"></i> Same-Day Service</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=80"
+            alt="Professional notary signing documents"
+            class="about-img"
+          />
+          <div class="about-badge-card">
+            <div class="big-num">31</div>
+            <p>5-Star Reviews<br>on Google</p>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <span class="tag">Who We Are</span>
+          <span class="divider"></span>
+          <h2>Serving Families & Businesses with Heart</h2>
+          <p>Arise & Shine Mobile Notary Services is committed to serving families and local businesses with professionalism, care, and personalized attention. Life moves quickly, and important documents shouldn't slow you down.</p>
+          <p>That's why we deliver reliable, certified notary services directly to your location—whether at home, the office, a hospital, or anywhere in between. No long waits, no inconvenient trips—just trusted service at your doorstep.</p>
+          <div class="about-features">
+            <div class="about-feat">
+              <div class="about-feat-icon"><i class="fas fa-home"></i></div>
+              <div class="about-feat-text"><strong>Mobile Service</strong><span>We come to you</span></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><i class="fas fa-clock"></i></div>
+              <div class="about-feat-text"><strong>Open 24/7</strong><span>Any time, any day</span></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><i class="fas fa-user-shield"></i></div>
+              <div class="about-feat-text"><strong>Certified & Bonded</strong><span>Fully credentialed</span></div>
+            </div>
+            <div class="about-feat">
+              <div class="about-feat-icon"><i class="fas fa-heart"></i></div>
+              <div class="about-feat-text"><strong>Personal Care</strong><span>Friendly service</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag" style="color:var(--gold-light);border-color:rgba(201,168,76,.4)">What We Do</span>
+        <span class="divider center"></span>
+        <h2>Professional Notary Services</h2>
+        <p>From everyday documents to urgent legal and real estate needs—we handle it all with precision and care.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-car"></i></div>
+          <h3>Mobile Notary Services</h3>
+          <p>We travel to your home, office, hospital, or any convenient location. No need to find a notary—we come to you at a time that works for you.</p>
+          <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal featured">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Emergency Notary Services</h3>
+          <p>Critical document that can't wait? We offer urgent, after-hours notarization 24/7—including weekends and holidays. Fast response guaranteed.</p>
+          <a href="tel:+18324297191" class="service-link">Call Now <i class="fas fa-phone"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+          <h3>Loan Signing</h3>
+          <p>Certified loan signing agent services for mortgage closings, refinancing, and HELOC transactions. Experienced, accurate, and reliable.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-gavel"></i></div>
+          <h3>Legal Documents</h3>
+          <p>Affidavits, power of attorney, wills, sworn statements, and other legal documents notarized with precision and confidentiality.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-home"></i></div>
+          <h3>Real Estate Documents</h3>
+          <p>Deeds, title transfers, closing documents, and real estate contracts. We work seamlessly with agents, attorneys, and title companies.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-visual reveal">
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80"
+            alt="Professional trust and service"
+            class="why-img"
+          />
+          <div class="why-overlay-card">
+            <div class="num">24/7</div>
+            <p>Always available,<br>day or night</p>
+          </div>
+        </div>
+        <div class="why-text">
+          <span class="tag">Why Choose Us</span>
+          <span class="divider"></span>
+          <h2>Your Trusted Notary, Anywhere & Anytime</h2>
+          <div class="why-reasons reveal">
+            <div class="why-item">
+              <span class="why-num">01</span>
+              <div>
+                <h3>Available 24 Hours a Day</h3>
+                <p>Emergencies don't follow business hours—and neither do we. Reach us any time, day or night, 365 days a year.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-num">02</span>
+              <div>
+                <h3>Fast & Reliable Response</h3>
+                <p>We understand urgency. When you call, we respond promptly and arrive prepared to handle your documents without delay.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-num">03</span>
+              <div>
+                <h3>Trusted by 31 Happy Clients</h3>
+                <p>Our 5.0 Google rating reflects our commitment to professionalism, accuracy, and genuine care for every client we serve.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-num">04</span>
+              <div>
+                <h3>Ultimate Mobile Convenience</h3>
+                <p>You have enough on your plate. We handle the logistics—coming directly to your preferred location, saving you time and stress.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <span class="tag">Client Reviews</span>
+        <span class="divider center" style="background:rgba(0,0,0,.2)"></span>
+        <h2>What Our Clients Say</h2>
+        <p>Real experiences from people who trusted us with their most important documents.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Amanda did an excellent job handling our mobile notary for a client closing. She was flexible when our location changed, met us without hesitation, and made the signing smooth and pleasant for everyone. Very friendly and professional, everyone appreciated working with her!"</p>
+          <div class="tcard-author">
+            <div class="author-avatar">E</div>
+            <div class="author-info">
+              <strong>Elridge Guillory</strong>
+              <span>Local Guide · 25 reviews · Google Review · 2 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Excellent service, incredibly convenient and professional experience. Mrs. Cantu came to our home at our convenience and saved us the hassle with our busy work schedule. I'll definitely be using Arise & Shine Mobile Notary service again."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <strong>Kalie Clarke</strong>
+              <span>2 reviews · Google Review · 2 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"I've worked with Amanda on multiple occasions, from property closings to separate documents needing notarized. Every experience has been excellent. Professional, punctual, kind, and very easy to work with. Highly recommend their mobile notary services!"</p>
+          <div class="tcard-author">
+            <div class="author-avatar">F</div>
+            <div class="author-info">
+              <strong>Fernando Hernandez</strong>
+              <span>5 reviews · Google Review · 5 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Amanda is absolutely wonderful! I needed a notary on short notice for some important legal documents. Not only was she willing to work with us on the date and time we needed, but she also was comfortable meeting us at a neutral location. She is very sweet, kind, and very professional! I'd recommend her to anyone needing a notary."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <strong>Shadow Gamer</strong>
+              <span>Local Guide · 5 reviews · Google Review · 6 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Amanda saved the day for us again. I am so glad she was able to help us on the day of closing. She was happy to accommodate us last minute and extremely knowledgeable. I highly recommend her."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <strong>James Blankenship</strong>
+              <span>3 reviews · Google Review · 6 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"I had a wonderful experience with Arise & Shine Mobile Notary Services! Amanda is extremely professional, efficient, and knowledgeable. Scheduling was easy, they were very accommodating with our timing, and everything was handled with care."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">B</div>
+            <div class="author-info">
+              <strong>Brianna Smith</strong>
+              <span>12 reviews · Google Review · 7 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"I want to express my sincere appreciation for your exceptional notarial services. Your professionalism, attention to detail, and efficient handling of the documents made the process seamless and stress-free. Thank you for your superb service."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">C</div>
+            <div class="author-info">
+              <strong>Cindy Zieschang</strong>
+              <span>2 reviews · Google Review · 4 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"When it comes to helping others, Amanda is extremely passionate. Takes her time explaining every detail very thoroughly. She made getting life insurance super easy for me. If you need any advice, even if it's something she isn't experienced in, she will take the time to study and learn and help to the best of her ability."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <strong>Kristal Cantu</strong>
+              <span>4 reviews · Google Review · 7 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"10/10 amazing experience. This notary is not only the most knowledgeable, friendly and pleasurable to be around but also full of faith and encouragement. I've used her multiple times and will continue to. She's always responsive and works around your schedule. Give her a try! You won't be disappointed."</p>
+          <div class="tcard-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <strong>Melissa Castro</strong>
+              <span>12 reviews · Google Review · 7 months ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tcard reveal">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Amanda is professional, efficient, and so easy to work with! Arise & Shine Mobile Notary made the process quick, friendly, and stress-free. Highly recommend!"</p>
+          <div class="tcard-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <strong>Jr Buenrostro</strong>
+              <span>8 reviews · Google Review · 7 months ago</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="google-badge reveal">
+        <i class="fab fa-google"></i>
+        <span><strong>5.0 / 5.0</strong> based on 31 Google reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="tag">Get In Touch</span>
+          <span class="divider"></span>
+          <h2>Ready to Get Your Documents Notarized?</h2>
+          <p>Call us anytime or fill out the form and we'll get back to you quickly. We're here 24/7 for your convenience.</p>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="cd-text">
+              <strong>Call or Text</strong>
+              <a href="tel:+18324297191">+1 (832) 429-7191</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-clock"></i></div>
+            <div class="cd-text">
+              <strong>Hours</strong>
+              <span>Open 24 Hours · 7 Days a Week</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="cd-text">
+              <strong>Service Area</strong>
+              <span>Houston, TX & Surrounding Areas</span>
+            </div>
+          </div>
+          <a href="tel:+18324297191" class="btn btn-gold" style="margin-top:1.5rem;font-size:1.05rem;padding:1rem 2rem">
+            <i class="fas fa-phone-alt"></i> Call Now – We're Available 24/7
+          </a>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <h3>Send Us a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="jane@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+1 (000) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service…</option>
+              <option>Mobile Notary Services</option>
+              <option>Loan Signing</option>
+              <option>Legal Documents</option>
+              <option>Real Estate Documents</option>
+              <option>Emergency Notary Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your notary needs, preferred time, or any questions…"></textarea>
+          </div>
+          <button class="btn btn-gold form-submit" onclick="handleSubmit(event)">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle" style="font-size:1.5rem;display:block;margin-bottom:.5rem"></i>
+            Thank you! We'll reach out shortly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-name serif" style="color:var(--white)">Arise & Shine</span>
+          <span class="logo-sub">Mobile Notary Services</span>
+          <p>Professional, certified, and compassionate notary services available 24/7. We come to you—anywhere in Houston and surrounding areas.</p>
+          <a href="tel:+18324297191" class="footer-phone">
+            <i class="fas fa-phone-alt"></i> +1 832-429-7191
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Mobile Notary</a></li>
+            <li><a href="#services">Loan Signing</a></li>
+            <li><a href="#services">Legal Documents</a></li>
+            <li><a href="#services">Real Estate</a></li>
+            <li><a href="#services">Emergency Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#testimonials">Client Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:+18324297191">Call Now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Arise & Shine Mobile Notary Services. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    function openMenu()  { document.getElementById('mobileMenu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.body.style.overflow = ''; }
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target;
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+      setTimeout(() => {
+        btn.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 1400);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
